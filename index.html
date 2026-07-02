@@ -2257,7 +2257,7 @@ function renderSetup() {
 
 function tileClasses(herb) {
   const selected = state.selectedTileUids.includes(herb.tileUid);
-  return 'tile-btn aspect-square sm:aspect-auto sm:h-24 w-full rounded-xl p-2 flex items-center justify-center text-center font-semibold text-xs sm:text-sm leading-tight select-none transition-all duration-150 border ' +
+  return 'tile-btn h-[72px] sm:h-24 w-full rounded-lg sm:rounded-xl p-1 sm:p-2 flex items-center justify-center text-center font-semibold text-[13px] sm:text-base leading-tight select-none transition-all duration-150 border ' +
     (selected
       ? 'bg-indigo-500 text-white border-indigo-300 ring-4 ring-indigo-400/50 scale-[0.97]'
       : 'bg-white/95 text-slate-900 border-slate-300 hover:bg-white hover:-translate-y-0.5 shadow');
@@ -2330,7 +2330,7 @@ function renderBoardArea() {
   }
   const grid = document.createElement('div');
   grid.id = 'tiles-grid';
-  grid.className = 'grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3';
+  grid.className = 'grid grid-cols-4 gap-1.5 sm:gap-3';
   for (const herb of state.currentTiles) grid.appendChild(createTileElement(herb));
   area.appendChild(grid);
 }
